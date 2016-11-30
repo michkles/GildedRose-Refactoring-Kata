@@ -1,3 +1,27 @@
+Gilded Rose Test
+
+
+Requirements:
+
+- add new feature that allows selling new category of items:
+  - conjured items(degrade 2x faster than normal items)
+
+
+Inventory:
+
+Item (each day both values are lowered)
+
+  - sell-in value (number of days item has to be sold)
+
+  - quality value:
+    max 50
+    if > sell_by_date(sell_in_value) degrades 2x faster
+    "Aged Brie" increases in quality the older it gets (+1)
+    “Sulfuras”, being a legendary item, never has to be sold or decreases in Quality
+    “Backstage passes”, like aged brie, increases in Quality as it’s SellIn value approaches; Quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less but Quality drops to 0 after the concert
+
+
+
 This Kata was originally created by Terry Hughes (http://twitter.com/#!/TerryHughes). It is already on GitHub [here](https://github.com/NotMyself/GildedRose). See also [Bobby Johnson's description of the kata](http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/).
 
 I translated the original C# into a few other languages, (with a little help from my friends!), and slightly changed the starting position. This means I've actually done a small amount of refactoring already compared with the original form of the kata, and made it easier to get going with writing tests by giving you one failing unit test to start with. I also added test fixtures for Text-Based approval testing with TextTest (see [the TextTests](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/master/texttests))
@@ -16,7 +40,7 @@ You could write some unit tests yourself, using the requirements to identify sui
 
 Alternatively, use the "Text-Based" tests provided in this repository. (Read more about that in the next section)
 
-Whichever testing approach you choose, the idea of the exercise is to do some deliberate practice, and improve your skills at designing test cases and refactoring. The idea is not to re-write the code from scratch, but rather to practice designing tests, taking small steps, running the tests often, and incrementally improving the design. 
+Whichever testing approach you choose, the idea of the exercise is to do some deliberate practice, and improve your skills at designing test cases and refactoring. The idea is not to re-write the code from scratch, but rather to practice designing tests, taking small steps, running the tests often, and incrementally improving the design.
 
 ## Text-Based Approval Testing
 
