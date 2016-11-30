@@ -9,7 +9,7 @@ class GildedRose
       if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
         if item.quality > 0
           if item.name != "Sulfuras, Hand of Ragnaros"
-            item.quality = item.quality - 1
+            quality_degradation(item)
           end
         end
       else
@@ -37,7 +37,7 @@ class GildedRose
           if item.name != "Backstage passes to a TAFKAL80ETC concert"
             if item.quality > 0
               if item.name != "Sulfuras, Hand of Ragnaros"
-                item.quality = item.quality - 1
+                quality_degradation(item)
               end
             end
           else
@@ -52,3 +52,11 @@ class GildedRose
     end
   end
 end
+
+  def quality_degradation(item)
+    item.quality -= 1
+  end
+
+  def quality_inprovement(item)
+    item.quality += 1
+  end
